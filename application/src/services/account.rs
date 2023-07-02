@@ -1,5 +1,5 @@
 use kernel::interfaces::transport::{DependOnSignUpFlowTransporter, DependOnVerifierFlowTransporter, SignUpFlowTransporter, VerifierFlowTransporter};
-use kernel::prelude::entities::{Account, Address, Identifier, Password, UserName};
+use kernel::prelude::entities::{Address, Identifier, Password, UserName};
 use crate::error::ApplicationError;
 use crate::transfer::account::{PendingAccountDto, VerifyAccountDto, CreateAccountDto};
 use crate::transfer::identifier::IdentifierDto;
