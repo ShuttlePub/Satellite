@@ -2,6 +2,11 @@
 members = [
     "kernel",
     "driver",
-    "service",
+    "application",
     "client",
 ]
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+orbital = "0.1"
