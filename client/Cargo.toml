@@ -2,18 +2,37 @@
 name = "client"
 version = "0.1.0"
 edition = "2021"
+license.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+futures = "0.3"
 yew = { version = "0.20", features = ["csr"] }
+yew-router = "0.17.0"
+gloo-events = "0.1"
 
 log = "0.4"
 wasm-logger = "0.2"
+uuid = { version = "1", features = ["v4"] }
+getrandom = { version = "0.2", features = ["js"] } # Depend on uuid in wasm.
+
+once_cell = "1.18.0" # Use for DI Container
+
+anyhow    = { workspace = true }
+thiserror = { workspace = true }
 
 kernel = { path = "../kernel" }
 driver = { path = "../driver" }
 application = { path = "../application" }
 
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "HtmlElement",
+    "HtmlInputElement"
+]
+
 [dev-dependencies]
 wasm-bindgen = "0.2"
+wasm-bindgen-test = "0.3"
